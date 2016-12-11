@@ -1,4 +1,4 @@
-body {
+    body {
     min-width: 300px;
     background-color: #000 !important;
 }
@@ -186,7 +186,7 @@ main nav li > a > i {
 
 .dropdown-menu {
     top: calc(100% + 18px) !important;
-    left: 22px !important;
+    left: -45px !important;
     background-color: transparent !important;
 }
 
@@ -292,10 +292,7 @@ main nav li > a:focus,
     }
     .nav-justified .nav-item {
         float: left;
-        width: 50%;
-    }
-    .dropdown-menu {
-        top: 100px !important;
+        width: 20%;
     }
 }
 
@@ -326,10 +323,14 @@ main nav li > a:focus,
     .timeLine {
         width: 38.5%;
     }
+    .nav-justified .nav-item {
+        width: 25%;
+    }
 }
 
 @media (max-width: 510px) {
-    .navbar-nav .nav-item {
+    .navbar-nav .nav-item,
+    .nav-justified .nav-item {
         width: 30%;
     }
     .score {
@@ -342,6 +343,13 @@ main nav li > a:focus,
     .name,
     .name span {
         font-size: 30px;
+    }
+    .dropdown-menu {
+        left: 0px !important;
+        top: calc(100% + 30px) !important;
+    }
+    .dropdown-item {
+        padding: 18px 20px 18px 20px !important;
     }
 }
 
@@ -363,5 +371,24 @@ main nav li > a:focus,
     .goalsFirstTeam ul li:first-of-type:after,
     .goalsSecondTeam ul li:first-of-type:before {
         margin-top: -30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .name,
+    .name span {
+        font-size: 21px;
+    }
+    .timeLine {
+        width: 32%;
+    }
+    .goalMinutes {
+        padding: 0px 10px;
+    }
+    .nav-justified .nav-item {
+        width: 50%;
+    }
+    .dropdown-menu {
+        top: 300% !important;
     }
 }
