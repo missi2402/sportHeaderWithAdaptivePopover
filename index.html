@@ -34,8 +34,8 @@
                     </div>
                     <div class="score">3:2</div>
                     <div class="secondTeam">
-                        <div class="name"><span>Neutak</span> Club</div>
-                        <img src="img/neutakSport.png" alt="NeumakClub">
+                        <div class="name" id="b1"><span>Neutak</span> Club</div>
+                        <img src="img/neutakSport.png" alt="NeumakClub" id="b2">
                     </div>
                 </div>
                 <div class="row">
@@ -66,7 +66,12 @@
     </header>
     <main>
         <nav>
-            <ul class="nav nav-justified container text-uppercase">
+            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class="nav nav-justified container collapse navbar-toggleable-sm text-uppercase" id="navbarResponsive">
                 <li class="nav-item"><a href="" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="" class="nav-link">Football<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                 <li class="nav-item dropdown">
@@ -104,27 +109,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     <!--Scripts for cross-->
     <script src="js/prefixfree.min.js "></script>
-    <script>
-    $(document).ready(function() {
-        $('[data-toggle="popover"]').popover();
-    });
-    window.onresize = setGoals;
-    setGoals();
-    function setGoals() { 
-        var goals = {"Allen ":12,"Kelan ":17,"Keyaloor ":23,"Bill ":67,"Marie ":83};
-        var timeLines = document.getElementsByClassName('timeLine');
-        var lenghtLine = timeLines[0].clientWidth;
-        var priceMinutes = lenghtLine / 45;
-        timeLines[0].innerHTML = '';
-        timeLines[1].innerHTML = '';
-        for( key in goals) if(goals[key] < 45) { 
-            timeLines[0].innerHTML = timeLines[0].innerHTML + '<a tabindex="0" role="button" data-placement="top" data-toggle="popover" data-trigger="focus" class="goal" data-content="' + key + ' ' + goals[key] + '\'" style="left: ' + goals[key] * priceMinutes + 'px"></a>';
-        } else {
-            timeLines[1].innerHTML = timeLines[1].innerHTML + '<a tabindex="0" role="button" data-placement="top" data-toggle="popover" data-trigger="focus" class="goal" data-content="' + key + ' ' + goals[key] + '\'" style="left: ' + (goals[key] - 45) * priceMinutes + 'px"></a>';
-        }
-        $('[data-toggle="popover"]').popover();
-    }
-    </script>
+    <script src="js/script.js "></script>
 </body>
 
 </html>

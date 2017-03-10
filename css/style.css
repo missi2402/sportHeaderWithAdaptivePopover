@@ -1,4 +1,4 @@
-    body {
+body {
     min-width: 300px;
     background-color: #000 !important;
 }
@@ -233,6 +233,7 @@ main nav li > a:focus,
 
 .nav-justified {
     width: 100%;
+    padding-right: 0 !important;
 }
 
 .nav-justified .nav-item {
@@ -243,6 +244,10 @@ main nav li > a:focus,
     width: 100%;
     margin-bottom: 5px;
     text-align: center;
+}
+
+.fa-angle-down {
+    margin-right: 5%;
 }
 
 @media (min-width: 768px) {
@@ -290,13 +295,9 @@ main nav li > a:focus,
     .secondTeam img {
         margin-bottom: 35px;
     }
-    .nav-justified .nav-item {
-        float: left;
-        width: 20%;
-    }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
     .navbar-brand {
         width: 100%;
         text-align: center;
@@ -305,48 +306,64 @@ main nav li > a:focus,
         width: 31%;
         text-align: center;
     }
-    header nav ul {
-        float: none!important;
-    }
     #withoutFloat {
-        float: none !important;
+        float: left !important;
+        width: 100%;
+    }
+    .firstTeam,
+    .secondTeam {
+        width: 35%;
     }
     .score {
-        padding-left: 0px;
+        width: 30%;
+        padding-left: 5%;
         font-size: 40px;
         margin-top: 50px;
     }
     .name,
     .name span {
-        font-size: 35px;
+        font-size: 30px;
     }
     .timeLine {
         width: 38.5%;
     }
-    .nav-justified .nav-item {
-        width: 25%;
+    .nav .open  .dropdown-menu{
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        text-align: center;
+    }
+    .navbar-toggler {
+        border: 1px solid rgb(255, 255, 255) !important;
+        margin-left: 40px;
+    }
+    .navbar-toggler .icon-bar {
+        display: block;
+        width: 24px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 7px;
     }
 }
 
 @media (max-width: 510px) {
-    .navbar-nav .nav-item,
-    .nav-justified .nav-item {
-        width: 30%;
+    .navbar-nav .nav-item {
+        width: 30.7%;
     }
     .score {
         font-size: 35px;
         letter-spacing: 10px;
+        padding-left: 0; 
+        margin-bottom: 70px;
     }
     .timeLine {
         width: 36%;
     }
     .name,
     .name span {
-        font-size: 30px;
-    }
-    .dropdown-menu {
-        left: 0px !important;
-        top: calc(100% + 30px) !important;
+        font-size: 25px;
     }
     .dropdown-item {
         padding: 18px 20px 18px 20px !important;
@@ -355,7 +372,7 @@ main nav li > a:focus,
 
 @media (max-width: 440px) {
     .navbar-nav .nav-item {
-        width: 27%;
+        width: 29.7%;
     }
     .score {
         font-size: 30px;
@@ -379,14 +396,14 @@ main nav li > a:focus,
     .name span {
         font-size: 21px;
     }
+    .navbar-nav .nav-item {
+        width: 29%;
+    }
     .timeLine {
         width: 32%;
     }
     .goalMinutes {
         padding: 0px 10px;
-    }
-    .nav-justified .nav-item {
-        width: 50%;
     }
     .dropdown-menu {
         top: 300% !important;
